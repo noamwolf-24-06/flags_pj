@@ -1,6 +1,4 @@
 import pygame
-WINDOW_WIDTH=1000
-WINDOW_HEIGHT=800
 SOLDIER_PNG=pygame.image.load('soldier.png')
 GRASS_PNG=pygame.image.load('grass.png')
 FLAG_PNG=pygame.image.load('flag.png')
@@ -10,3 +8,5 @@ NUM_OF_ROWS=25
 NUM_OF_COLS=50
 NUM_OF_MINES=20
 NUM_OF_BUSHES=20
+WINDOW_WIDTH=100*NUM_OF_COLS
+WINDOW_HEIGHT=100*NUM_OF_ROWS
