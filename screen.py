@@ -29,6 +29,7 @@ def draw_a_bush(x, y):
     screen.blit(GRASS, (x, y))
 
 spawn_bushes()
+print("screen")
 
 
 running = True
