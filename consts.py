@@ -1,5 +1,4 @@
 import pygame
-SOLDIER_PNG=pygame.image.load('soldier.png')
 GRASS_PNG=pygame.image.load('grass.png')
 FLAG_PNG=pygame.image.load('flag.png')
 MINE_PNG=pygame.image.load('mine.png')
@@ -12,5 +11,6 @@ NUM_OF_BUSHES=20
 WINDOW_WIDTH=TILE_SIZE*NUM_OF_COLS
 WINDOW_HEIGHT=TILE_SIZE*NUM_OF_ROWS
 COLOR_OF_GRID="pink"
-START_PLAYER=(0,0)
 PLAYER_SPEED=20
+LOSE_MESSAGE = "You Lost!"
+WIN_MESSAGE = "You Won!"
