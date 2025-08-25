@@ -43,12 +43,15 @@ def draw_mine():
             if game_field.matrix_grid[i][j] == "M":
                 coordinates = (j * (consts.TILE_SIZE)), (i * (consts.TILE_SIZE))
                 screen.blit(MINE, coordinates)
-
+def make_flag():
+    FLAG = pygame.transform.scale(consts.FLAG_PNG,(80,60))
+    return screen.blit(FLAG,consts.FLAG_COORDINATES)
 
 def draw_screen():
     spawn_bushes()
     draw_grid()
     draw_mine()
+    make_flag()
     # pygame.display.update()
 
 draw_screen()
