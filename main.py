@@ -86,7 +86,6 @@ while run:
 
             # Increasing the y coordinate
             # if the button pressed is
-            # Down arrow key
             if event.key == pygame.K_DOWN:
                 y += velocity
         pygame.display.update()
