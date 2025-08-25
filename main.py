@@ -83,6 +83,9 @@ while run:
                 screen.screen.fill('black')
                 screen.draw_grid()
                 screen.draw_mine()
+                screen.make_flag()
+                window.blit(SOLDIER, (soldier_x, soldier_y))
+
 
             # Increasing the y coordinate
             # if the button pressed is
