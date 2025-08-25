@@ -11,7 +11,6 @@ screen.fill(background_colour)
 pygame.display.flip()
 pygame.display.set_caption('flag game')
 
-
 def spawn_bushes():
     for i in range(consts.NUM_OF_BUSHES):
         x = random.randint(0,
@@ -25,8 +24,8 @@ def draw_a_bush(x, y):
     screen.blit(GRASS, (x, y))
 
 def make_soldier():
-    SOLDIER = pygame.transform.scale(consts.SOLDIER_PNG, (80,80))
-    return screen.screen.blit(SOLDIER,consts.START_PLAYER)
+    SOLDIER = pygame.transform.scale(soldier.SOLIDER_PNG, (80,80))
+    return screen.screen.blit(SOLDIER,soldier.START_PLAYER)
 
 def draw_grid():
     for x in range(consts.TILE_SIZE, consts.WINDOW_WIDTH, consts.TILE_SIZE):
@@ -45,18 +44,22 @@ def draw_mine():
                 coordinates = (j * (consts.TILE_SIZE)), (i * (consts.TILE_SIZE))
                 screen.blit(MINE, coordinates)
 
-spawn_bushes()
-draw_grid()
-draw_mine()
-soldier.make_soldier()
 
-running = True
-part_one = True
-while running:
-    # if part_one:
-    #     soldier.make_soldier()
+def draw_screen():
+    spawn_bushes()
+    draw_grid()
+    draw_mine()
+    # pygame.display.update()
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-    pygame.display.update()
+draw_screen()
+pygame.display.update()
+
+# running = True
+# part_one = True
+#
+# while running:
+#      for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             running = False
+#      pygame.display.update()
+draw_screen()
