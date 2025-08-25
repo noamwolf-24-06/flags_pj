@@ -23,8 +23,8 @@ screen.spawn_bushes()
 # Store the initial
 # coordinates of the player in
 # two variables i.e. x and y.
-x = 0
-y = 0
+soldier_x = 0
+soldier_y = 0
 screen.screen.fill(consts.BACKGROUND_COLOR)
 
 # Create a variable to store the
@@ -42,7 +42,7 @@ while run:
 
     # Display the player sprite at x
     # and y coordinates
-    window.blit(SOLDIER, (x, y))
+    window.blit(SOLDIER, (soldier_x, soldier_y))
 
     # iterate over the list of Event objects
     # that was returned by pygame.event.get()
@@ -65,21 +65,21 @@ while run:
             # if the button pressed is
             # Left arrow key
             if event.key == pygame.K_LEFT:
-                x -= velocity
+                soldier_x -= velocity
 
             # Increasing the x coordinate
             # if the button pressed is
             # Right arrow key
             if event.key == pygame.K_RIGHT:
-                x += velocity
+                soldier_x += velocity
 
             # Decreasing the y coordinate
             # if the button pressed is
             # Up arrow key
             if event.key == pygame.K_UP:
-                y -= velocity
+                soldier_y -= velocity
 
-            if event.key == pygame.K_KP_ENTER:
+            if event.key == pygame.K_RETURN:
                 screen.screen.fill('black')
                 screen.draw_grid()
                 screen.draw_mine()
@@ -87,5 +87,5 @@ while run:
             # Increasing the y coordinate
             # if the button pressed is
             if event.key == pygame.K_DOWN:
-                y += velocity
+                soldier_y += velocity
         pygame.display.update()
