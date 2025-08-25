@@ -10,5 +10,5 @@ for row in range(len(game_field.matrix_grid)):
         if game_field.matrix_grid[row][col]=="M":
             minex=row
             miney=col
-            if abs(PLAYER_COORDINATES_X - minex)<
+
 
