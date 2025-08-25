@@ -32,12 +32,15 @@ def draw_grid():
         pygame.draw.line(screen, consts.COLOR_OF_GRID, (0, y),
                          (consts.WINDOW_WIDTH, y))
 
+
 def draw_mine():
+    MINE = pygame.transform.scale(consts.MINE_PNG, (20, 20))
     for i in range(consts.NUM_OF_ROWS):
         for j in range(consts.NUM_OF_COLS):
-            if game_field.matrix_grid[i][j] = "M"
-                coordinates = ((i+1)*consts.TILE_SIZE,((j+1)*consts.TILE_SIZE)
-                screen.blit(GRASS, (x, y))
+            if game_field.matrix_grid[i][j] == "M":
+                coordinates = ((i + 1) * consts.TILE_SIZE,
+                               ((j + 1) * consts.TILE_SIZE))
+                screen.blit(MINE, coordinates)
 
 
 spawn_bushes()
