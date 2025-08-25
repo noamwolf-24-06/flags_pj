@@ -10,12 +10,13 @@ def create_matrix():
     return game_grid
 matrix_grid=create_matrix()
 def mine_in_matrix(matrix_grid):
-    for row in matrix_grid:
-        random_row=random.randrange(consts.NUM_OF_ROWS)
-        for col in row:
-            random_col=random.randrange(consts.NUM_OF_COLS)
-            if row==random_row and col ==random_col:
-                matrix_grid[row][col]=="M"
+    for i in range (20):
+        random_row = random.randrange(consts.NUM_OF_ROWS)
+        random_col = random.randrange(consts.NUM_OF_COLS)
+        for row in range(len(matrix_grid)):
+            for col in range(len(matrix_grid[row])):
+                if row==random_row and col == random_col:
+                    matrix_grid[row][col]="M"
     return matrix_grid
 matrix_grid=mine_in_matrix(matrix_grid)
 def print_matrix(matrix_grid):
